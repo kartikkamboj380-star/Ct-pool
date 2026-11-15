@@ -88,15 +88,17 @@ if [ -z "${APK_SIGN_TS_DIR:-}" ]; then
 fi
 LIB_ENTRY="$APK_SIGN_TS_DIR/dist/index.js"
 [ -f "$LIB_ENTRY" ] || { echo "ERROR: apk_sign_ts not found at $APK_SIGN_TS_DIR"; exit 1; }
+echo "    patching apk_sign_ts (preserve META-INF content entries) ..."
+python3 "$SCRIPTS/patch_signer.py" "$APK_SIGN_TS_DIR"
 for t in "${SPLITS[@]}" universal; do
   node "$SCRIPTS/sign_apk.mjs" "$LIB_ENTRY" "$WORK/aligned/$t.apk" \
     "$WORK/signed/$t.apk" "$SIGN_DIR/key.pem" "$SIGN_DIR/cert.pem"
 done
 
-echo "==> [6/7] verify signatures, alignment, integrity"
+echo "==> [6/7] verify signatures, alignment, integrity, entry sets"
 for t in "${SPLITS[@]}" universal; do
   echo "    -- $t"
-  python3 "$SCRIPTS/verify_apk.py" "$WORK/signed/$t.apk"
+  python3 "$SCRIPTS/verify_apk.py" "$WORK/signed/$t.apk" --expect "$WORK/aligned/$t.apk"
   if command -v apksigtool >/dev/null 2>&1; then
     apksigtool verify "$WORK/signed/$t.apk" >/dev/null && echo "    PASS apksigtool verify ($t)"
   else

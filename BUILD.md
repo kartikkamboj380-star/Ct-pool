@@ -38,11 +38,15 @@ adb install dist/CTPool_1.0.25_universal_arm64.apk
 3. `scripts/prepare_apk.py` — zip-aligns (`.so` @ 4096, `resources.arsc` @ 4),
    injects `stamp-cert-sha256`, and merges the arm64 `lib/` into the universal
    APK (stored uncompressed).
-4. `scripts/sign_apk.mjs` — signs every APK with **JAR v1 + v2 + v3**
+4. `scripts/patch_signer.py` narrows apk_sign_ts's overly aggressive
+   `META-INF/` strip (it used to delete `META-INF/services/*`, `*.version`
+   metadata etc.) to actual signature files only, then
+   `scripts/sign_apk.mjs` signs every APK with **JAR v1 + v2 + v3**
    (SHA-256) using [`apk_sign_ts`](https://www.npmjs.com/package/apk_sign_ts).
 5. Verification of every APK:
    - `scripts/verify_apk.py` — CRCs, unsafe paths, required alignment, every
-     v1 manifest digest, and the PKCS7 signature over `CERT.SF` (crypto-level);
+     v1 manifest digest, the PKCS7 signature over `CERT.SF` (crypto-level),
+     and an **entry-set check**: every pre-sign entry must survive signing;
    - `apksigtool verify` — crypto verification of the v2/v3 signing block.
 6. Packages `dist/` artifacts + checksums.
 

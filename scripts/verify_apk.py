@@ -15,6 +15,7 @@ Requires: pip install asn1crypto cryptography
 """
 import base64
 import hashlib
+import re
 import struct
 import sys
 import zipfile
@@ -224,11 +225,34 @@ def check_alignment(apk, zf):
     return bad, info_notes
 
 
+def check_expected_entries(zf, expected_path):
+    """Every non-signature entry of the pre-sign input must survive signing."""
+    if not expected_path:
+        return True, "no --expect given (entry-set check skipped)"
+    exp = set(zipfile.ZipFile(expected_path).namelist())
+    sig_re = re.compile(
+        r"^META-INF/(?:MANIFEST\.MF|[^/]+\.(?:SF|RSA|DSA|EC)|SIG-.+)$",
+        re.IGNORECASE)
+    exp = {n for n in exp if not sig_re.match(n)}
+    have = set(zf.namelist())
+    missing = sorted(exp - have)
+    if missing:
+        return False, (f"{len(missing)} pre-sign entries MISSING after "
+                       f"signing (e.g. {missing[:5]})")
+    return True, (f"all {len(exp)} pre-sign entries preserved "
+                  f"(+{len(have - exp)} added)")
+
+
 def main():
-    if len(sys.argv) != 2:
+    args = sys.argv[1:]
+    expect = None
+    if len(args) == 3 and args[1] == "--expect":
+        apk, expect = args[0], args[2]
+    elif len(args) == 1:
+        apk = args[0]
+    else:
         print(__doc__)
         sys.exit(2)
-    apk = sys.argv[1]
     ok = True
     zf = zipfile.ZipFile(apk)
 
@@ -261,6 +285,10 @@ def main():
         if notes:
             msg += f"; {len(notes)} non-critical stored entries off-4 (harmless)"
         print(msg)
+
+    ent_ok, ent_msg = check_expected_entries(zf, expect)
+    print(("PASS " if ent_ok else "FAIL ") + "entry set: " + ent_msg)
+    ok = ok and ent_ok
 
     sys.exit(0 if ok else 1)
 
