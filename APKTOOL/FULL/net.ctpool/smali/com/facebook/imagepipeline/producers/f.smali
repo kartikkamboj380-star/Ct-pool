@@ -1,0 +1,39 @@
+.class public abstract Lcom/facebook/imagepipeline/producers/f;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/facebook/imagepipeline/producers/f0;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public b()V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public c()V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public d()V
+    .locals 0
+
+    .line 1
+    return-void
+.end method

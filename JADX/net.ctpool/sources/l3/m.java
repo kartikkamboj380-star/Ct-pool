@@ -1,0 +1,25 @@
+package l3;
+
+import com.google.android.gms.common.api.Api;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.Result;
+import com.google.android.gms.common.api.Status;
+
+/* JADX INFO: loaded from: classes.dex */
+final class m extends p {
+    m(GoogleApiClient googleApiClient) {
+        super(googleApiClient);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    @Override // com.google.android.gms.common.api.internal.BaseImplementation.ApiMethodImpl
+    protected final /* bridge */ /* synthetic */ void doExecute(Api.AnyClient anyClient) {
+        i iVar = (i) anyClient;
+        ((w) iVar.getService()).l0(new l(this), iVar.c());
+    }
+
+    @Override // com.google.android.gms.common.api.internal.BasePendingResult
+    protected final /* bridge */ /* synthetic */ Result createFailedResult(Status status) {
+        return status;
+    }
+}

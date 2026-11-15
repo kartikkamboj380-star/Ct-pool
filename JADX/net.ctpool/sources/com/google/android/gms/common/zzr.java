@@ -1,0 +1,39 @@
+package com.google.android.gms.common;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class zzr implements Parcelable.Creator {
+    @Override // android.os.Parcelable.Creator
+    public final /* bridge */ /* synthetic */ Object createFromParcel(Parcel parcel) {
+        int iValidateObjectHeader = SafeParcelReader.validateObjectHeader(parcel);
+        boolean z6 = false;
+        int i7 = 0;
+        String strCreateString = null;
+        int i8 = 0;
+        while (parcel.dataPosition() < iValidateObjectHeader) {
+            int header = SafeParcelReader.readHeader(parcel);
+            int fieldId = SafeParcelReader.getFieldId(header);
+            if (fieldId == 1) {
+                z6 = SafeParcelReader.readBoolean(parcel, header);
+            } else if (fieldId == 2) {
+                strCreateString = SafeParcelReader.createString(parcel, header);
+            } else if (fieldId == 3) {
+                i8 = SafeParcelReader.readInt(parcel, header);
+            } else if (fieldId != 4) {
+                SafeParcelReader.skipUnknownField(parcel, header);
+            } else {
+                i7 = SafeParcelReader.readInt(parcel, header);
+            }
+        }
+        SafeParcelReader.ensureAtEnd(parcel, iValidateObjectHeader);
+        return new zzq(z6, strCreateString, i8, i7);
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public final /* synthetic */ Object[] newArray(int i7) {
+        return new zzq[i7];
+    }
+}

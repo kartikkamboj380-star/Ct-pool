@@ -1,0 +1,340 @@
+JADX/net.ctpool/sources/F0/a.java:3:import com.ctpool.updater.UpdaterModule;
+JADX/net.ctpool/sources/G1/j.java:44:            P0.a.M("BitmapPoolBackend", "Cannot reuse a recycled bitmap: %s", bitmap);
+JADX/net.ctpool/sources/G1/j.java:50:        P0.a.M("BitmapPoolBackend", "Cannot reuse an immutable bitmap: %s", bitmap);
+JADX/net.ctpool/sources/G1/D.java:96:            K1.b.a("PoolConfig()");
+JADX/net.ctpool/sources/G1/z.java:16:        w5.k.f(eVar, "pool");
+JADX/net.ctpool/sources/G1/z.java:17:        w5.k.f(lVar, "pooledByteStreams");
+JADX/net.ctpool/sources/G1/F.java:3:import com.facebook.imagepipeline.memory.AshmemMemoryChunkPool;
+JADX/net.ctpool/sources/G1/F.java:4:import com.facebook.imagepipeline.memory.BufferMemoryChunkPool;
+JADX/net.ctpool/sources/G1/F.java:5:import com.facebook.imagepipeline.memory.NativeMemoryChunkPool;
+JADX/net.ctpool/sources/G1/F.java:42:                this.f1177b = (com.facebook.imagepipeline.memory.e) AshmemMemoryChunkPool.class.getConstructor(R0.d.class, G.class, H.class).newInstance(this.f1176a.i(), this.f1176a.g(), this.f1176a.h());
+JADX/net.ctpool/sources/G1/F.java:120:                this.f1179d = (com.facebook.imagepipeline.memory.e) BufferMemoryChunkPool.class.getConstructor(R0.d.class, G.class, H.class).newInstance(this.f1176a.i(), this.f1176a.g(), this.f1176a.h());
+JADX/net.ctpool/sources/G1/F.java:135:                this.f1180e = (com.facebook.imagepipeline.memory.e) NativeMemoryChunkPool.class.getConstructor(R0.d.class, G.class, H.class).newInstance(this.f1176a.i(), this.f1176a.g(), this.f1176a.h());
+JADX/net.ctpool/sources/G1/F.java:137:                P0.a.k("PoolFactory", "", e7);
+JADX/net.ctpool/sources/G1/F.java:147:            O0.l.h(eVarE, "failed to get pool for chunk type: " + i7);
+JADX/net.ctpool/sources/G/c.java:12:    public static int[] f1133a = {R.attr.color, R.attr.alpha, R.attr.lStar, net.ctpool.R.attr.alpha, net.ctpool.R.attr.lStar};
+JADX/net.ctpool/sources/G/c.java:15:    public static int[] f1134b = {net.ctpool.R.attr.elevation};
+JADX/net.ctpool/sources/G/c.java:18:    public static int[] f1136d = {net.ctpool.R.attr.fontProviderAuthority, net.ctpool.R.attr.fontProviderCerts, net.ctpool.R.attr.fontProviderFetchStrategy, net.ctpool.R.attr.fontProviderFetchTimeout, net.ctpool.R.attr.fontProviderPackage, net.ctpool.R.attr.fontProviderQuery, net.ctpool.R.attr.fontProviderSystemFontFamily};
+JADX/net.ctpool/sources/G/c.java:21:    public static int[] f1137e = {R.attr.font, R.attr.fontWeight, R.attr.fontStyle, R.attr.ttcIndex, R.attr.fontVariationSettings, net.ctpool.R.attr.font, net.ctpool.R.attr.fontStyle, net.ctpool.R.attr.fontVariationSettings, net.ctpool.R.attr.fontWeight, net.ctpool.R.attr.ttcIndex};
+JADX/net.ctpool/sources/H1/c.java:102:                            throw new NullPointerException("BitmapPool.get returned null");
+JADX/net.ctpool/sources/H1/a.java:13:        k.f(iVar, "bitmapPool");
+JADX/net.ctpool/sources/H1/e.java:17:        k.f(iVar, "bitmapPool");
+JADX/net.ctpool/sources/H1/g.java:19:        k.f(f7, "poolFactory");
+JADX/net.ctpool/sources/H1/g.java:23:            k.e(iVarB, "poolFactory.bitmapPool");
+JADX/net.ctpool/sources/H1/g.java:27:        k.e(iVarB2, "poolFactory.bitmapPool");
+JADX/net.ctpool/sources/H1/g.java:32:        k.f(f7, "poolFactory");
+JADX/net.ctpool/sources/A3/j.java:3:import net.ctpool.R;
+JADX/net.ctpool/sources/K4/b.java:7:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/K4/b.java:30:            ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(i7, i7, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), threadFactory);
+JADX/net.ctpool/sources/K4/b.java:31:            threadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/K4/b.java:32:            return Executors.unconfigurableExecutorService(threadPoolExecutor);
+JADX/net.ctpool/sources/M5/AbstractC0426c.java:5:import java.util.concurrent.ScheduledThreadPoolExecutor;
+JADX/net.ctpool/sources/M5/AbstractC0426c.java:17:            method = ScheduledThreadPoolExecutor.class.getMethod("setRemoveOnCancelPolicy", Boolean.TYPE);
+JADX/net.ctpool/sources/M5/AbstractC0426c.java:27:            ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = executor instanceof ScheduledThreadPoolExecutor ? (ScheduledThreadPoolExecutor) executor : null;
+JADX/net.ctpool/sources/M5/AbstractC0426c.java:28:            if (scheduledThreadPoolExecutor == null || (method = f2081a) == null) {
+JADX/net.ctpool/sources/M5/AbstractC0426c.java:31:            method.invoke(scheduledThreadPoolExecutor, Boolean.TRUE);
+JADX/net.ctpool/sources/O5/l.java:17:    public static final int f2537c = I.e("kotlinx.coroutines.scheduler.core.pool.size", C5.g.c(G.a(), 2), 1, 0, 8, null);
+JADX/net.ctpool/sources/O5/l.java:20:    public static final int f2538d = I.e("kotlinx.coroutines.scheduler.max.pool.size", 2097150, 0, 2097150, 4, null);
+JADX/net.ctpool/sources/O5/a.java:437:            throw new IllegalArgumentException(("Core pool size " + i7 + " should be at least 1").toString());
+JADX/net.ctpool/sources/O5/a.java:440:            throw new IllegalArgumentException(("Max pool size " + i8 + " should be greater than or equals to core pool size " + i7).toString());
+JADX/net.ctpool/sources/O5/a.java:443:            throw new IllegalArgumentException(("Max pool size " + i8 + " should not exceed maximal supported number of threads 2097150").toString());
+JADX/net.ctpool/sources/O5/a.java:766:        return this.f2502p + '@' + M.b(this) + "[Pool Size {core = " + this.f2499m + ", max = " + this.f2500n + "}, Worker States {CPU = " + i7 + ", blocking = " + i8 + ", parked = " + i9 + ", dormant = " + i10 + ", terminated = " + i11 + "}, running workers queues = " + arrayList + ", global CPU queue size = " + this.f2503q.c() + ", global blocking queue size = " + this.f2504r.c() + ", Control State {created workers= " + ((int) (2097151 & j7)) + ", blocking tasks = " + ((int) ((4398044413952L & j7) >> 21)) + ", CPUs acquired = " + (this.f2499m - ((int) ((9223367638808264704L & j7) >> 42))) + "}]";
+JADX/net.ctpool/sources/Q/a.java:124:        return AsyncTask.THREAD_POOL_EXECUTOR;
+JADX/net.ctpool/sources/R0/g.java:71:            P0.a.j("PooledByteInputStream", "Finalized without closing");
+JADX/net.ctpool/sources/V/c.java:9:    public static int[] f3999a = {R.attr.color, R.attr.alpha, R.attr.lStar, net.ctpool.R.attr.alpha, net.ctpool.R.attr.lStar};
+JADX/net.ctpool/sources/V/c.java:12:    public static int[] f4000b = {net.ctpool.R.attr.fontProviderAuthority, net.ctpool.R.attr.fontProviderCerts, net.ctpool.R.attr.fontProviderFetchStrategy, net.ctpool.R.attr.fontProviderFetchTimeout, net.ctpool.R.attr.fontProviderPackage, net.ctpool.R.attr.fontProviderQuery, net.ctpool.R.attr.fontProviderSystemFontFamily};
+JADX/net.ctpool/sources/V/c.java:15:    public static int[] f4001c = {R.attr.font, R.attr.fontWeight, R.attr.fontStyle, R.attr.ttcIndex, R.attr.fontVariationSettings, net.ctpool.R.attr.font, net.ctpool.R.attr.fontStyle, net.ctpool.R.attr.fontVariationSettings, net.ctpool.R.attr.fontWeight, net.ctpool.R.attr.ttcIndex};
+JADX/net.ctpool/sources/V/c.java:24:    public static int[] f4004f = {R.attr.orientation, R.attr.clipToPadding, R.attr.descendantFocusability, net.ctpool.R.attr.fastScrollEnabled, net.ctpool.R.attr.fastScrollHorizontalThumbDrawable, net.ctpool.R.attr.fastScrollHorizontalTrackDrawable, net.ctpool.R.attr.fastScrollVerticalThumbDrawable, net.ctpool.R.attr.fastScrollVerticalTrackDrawable, net.ctpool.R.attr.layoutManager, net.ctpool.R.attr.reverseLayout, net.ctpool.R.attr.spanCount, net.ctpool.R.attr.stackFromEnd};
+JADX/net.ctpool/sources/androidx/constraintlayout/widget/g.java:3:import net.ctpool.R;
+JADX/net.ctpool/sources/androidx/core/provider/h.java:11:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/androidx/core/provider/h.java:103:    static ThreadPoolExecutor a(String str, int i7, int i8) {
+JADX/net.ctpool/sources/androidx/core/provider/h.java:104:        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(0, 1, i8, TimeUnit.MILLISECONDS, new LinkedBlockingDeque(), new a(str, i7));
+JADX/net.ctpool/sources/androidx/core/provider/h.java:105:        threadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/androidx/core/provider/h.java:106:        return threadPoolExecutor;
+JADX/net.ctpool/sources/androidx/core/util/Pools$SimplePool.java:4:public class Pools$SimplePool implements d {
+JADX/net.ctpool/sources/androidx/core/util/Pools$SimplePool.java:12:    public Pools$SimplePool(int i7) {
+JADX/net.ctpool/sources/androidx/core/util/Pools$SimplePool.java:14:            throw new IllegalArgumentException("The max pool size must be > 0");
+JADX/net.ctpool/sources/androidx/core/util/Pools$SimplePool.java:31:            throw new IllegalStateException("Already in the pool!");
+JADX/net.ctpool/sources/androidx/core/util/e.java:4:public class e extends Pools$SimplePool {
+JADX/net.ctpool/sources/androidx/core/util/e.java:14:    @Override // androidx.core.util.Pools$SimplePool, androidx.core.util.d
+JADX/net.ctpool/sources/androidx/core/util/e.java:23:    @Override // androidx.core.util.Pools$SimplePool, androidx.core.util.d
+JADX/net.ctpool/sources/androidx/coordinatorlayout/widget/a.java:3:import androidx.core.util.Pools$SimplePool;
+JADX/net.ctpool/sources/androidx/coordinatorlayout/widget/a.java:14:    private final d f6866a = new Pools$SimplePool(10);
+JADX/net.ctpool/sources/androidx/work/a.java:144:        return Executors.newFixedThreadPool(Math.max(2, Math.min(Runtime.getRuntime().availableProcessors() - 1, 4)), b(z6));
+JADX/net.ctpool/sources/androidx/recyclerview/widget/a.java:3:import androidx.core.util.Pools$SimplePool;
+JADX/net.ctpool/sources/androidx/recyclerview/widget/a.java:593:        this.f8724a = new Pools$SimplePool(30);
+JADX/net.ctpool/sources/androidx/recyclerview/widget/RecyclerView.java:2894:                    throw new IllegalArgumentException("Called scrap view with an invalid view. Invalid views cannot be reused from scrap, they should rebound from recycler pool." + RecyclerView.this.P());
+JADX/net.ctpool/sources/androidx/recyclerview/widget/RecyclerView.java:5522:    public t getRecycledViewPool() {
+JADX/net.ctpool/sources/androidx/recyclerview/widget/RecyclerView.java:6458:    public void setRecycledViewPool(t tVar) {
+JADX/net.ctpool/sources/androidx/recyclerview/widget/q.java:3:import androidx.core.util.Pools$SimplePool;
+JADX/net.ctpool/sources/androidx/recyclerview/widget/q.java:18:        static androidx.core.util.d f8886d = new Pools$SimplePool(20);
+JADX/net.ctpool/sources/androidx/emoji2/text/b.java:8:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/androidx/emoji2/text/b.java:20:    static ThreadPoolExecutor b(final String str) {
+JADX/net.ctpool/sources/androidx/emoji2/text/b.java:21:        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(0, 1, 15L, TimeUnit.SECONDS, new LinkedBlockingDeque(), new ThreadFactory() { // from class: androidx.emoji2.text.a
+JADX/net.ctpool/sources/androidx/emoji2/text/b.java:27:        threadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/androidx/emoji2/text/b.java:28:        return threadPoolExecutor;
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:12:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:56:        private ThreadPoolExecutor f7910g;
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:89:                    ThreadPoolExecutor threadPoolExecutor = this.f7910g;
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:90:                    if (threadPoolExecutor != null) {
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:91:                        threadPoolExecutor.shutdown();
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:189:                        ThreadPoolExecutor threadPoolExecutorB = androidx.emoji2.text.b.b("emojiCompat");
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:190:                        this.f7910g = threadPoolExecutorB;
+JADX/net.ctpool/sources/androidx/emoji2/text/j.java:191:                        this.f7909f = threadPoolExecutorB;
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:11:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:34:            final /* synthetic */ ThreadPoolExecutor f7840b;
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:36:            a(e.h hVar, ThreadPoolExecutor threadPoolExecutor) {
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:38:                this.f7840b = threadPoolExecutor;
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:66:            final ThreadPoolExecutor threadPoolExecutorB = androidx.emoji2.text.b.b("EmojiCompatInitializer");
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:67:            threadPoolExecutorB.execute(new Runnable() { // from class: androidx.emoji2.text.f
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:70:                    this.f7878m.d(hVar, threadPoolExecutorB);
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:77:        public void d(e.h hVar, ThreadPoolExecutor threadPoolExecutor) {
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:83:                jVarA.c(threadPoolExecutor);
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:84:                jVarA.a().a(new a(hVar, threadPoolExecutor));
+JADX/net.ctpool/sources/androidx/emoji2/text/EmojiCompatInitializer.java:87:                threadPoolExecutor.shutdown();
+JADX/net.ctpool/sources/androidx/room/x.java:71:            w5.k.e(it, "queryPool.descendingKeySet().iterator()");
+JADX/net.ctpool/sources/Y5/h.java:59:        this.f4588c = new b(U5.c.f3991i + " ConnectionPool");
+JADX/net.ctpool/sources/Y5/f.java:185:        w5.k.f(hVar, "connectionPool");
+JADX/net.ctpool/sources/Y5/f.java:440:        B b7 = new B.a().l(this.f4576s.a().l()).g("CONNECT", null).e("Host", U5.c.P(this.f4576s.a().l(), true)).e("Proxy-Connection", "Keep-Alive").e("User-Agent", "okhttp/4.9.2").b();
+JADX/net.ctpool/sources/Y5/f.java:441:        B bA = this.f4576s.a().h().a(this.f4576s, new D.a().r(b7).p(A.HTTP_1_1).g(407).m("Preemptive Authenticate").b(U5.c.f3985c).s(-1L).q(-1L).j("Proxy-Authenticate", "OkHttp-Preemptive").c());
+JADX/net.ctpool/sources/Y5/e.java:159:            String str = "OkHttp " + this.f4556o.x();
+JADX/net.ctpool/sources/Y5/d.java:49:        w5.k.f(hVar, "connectionPool");
+JADX/net.ctpool/sources/T5/m.java:14:import okhttp3.internal.publicsuffix.PublicSuffixDatabase;
+JADX/net.ctpool/sources/T5/p.java:14:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/T5/p.java:140:                this.f3602d = new ThreadPoolExecutor(0, Api.BaseClientBuilder.API_PRIORITY_OTHER, 60L, TimeUnit.SECONDS, new SynchronousQueue(), U5.c.K(U5.c.f3991i + " Dispatcher", false));
+JADX/net.ctpool/sources/T5/z.java:448:            w5.k.f(zVar, "okHttpClient");
+JADX/net.ctpool/sources/T5/z.java:505:            throw new NullPointerException("null cannot be cast to non-null type kotlin.collections.List<okhttp3.Interceptor?>");
+JADX/net.ctpool/sources/T5/z.java:511:            throw new NullPointerException("null cannot be cast to non-null type kotlin.collections.List<okhttp3.Interceptor?>");
+JADX/net.ctpool/sources/T5/C0457c.java:639:            throw new NullPointerException("null cannot be cast to non-null type okhttp3.Cache.CacheResponseBody");
+JADX/net.ctpool/sources/app/notifee/core/database/NotifeeCoreDatabase.java:19:    public static final ExecutorService f9540b = Executors.newCachedThreadPool();
+JADX/net.ctpool/sources/com/android/billingclient/api/C0749c.java:257:            this.f10205B = Executors.newFixedThreadPool(com.google.android.gms.internal.play_billing.A.f15014a, new ThreadFactoryC0762p(this));
+JADX/net.ctpool/sources/com/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder.java:109:            throw new C2217h(String.format(Locale.US, "Attempted to pin a bitmap of size %d bytes. The current pool count is %d, the current pool size is %d bytes. The current pool max count is %d, the current pool max size is %d bytes.", Integer.valueOf(iG), Integer.valueOf(this.f10698a.b()), Long.valueOf(this.f10698a.f()), Integer.valueOf(this.f10698a.c()), Integer.valueOf(this.f10698a.d())));
+JADX/net.ctpool/sources/com/facebook/imagepipeline/producers/D.java:253:        this.f10731d = Executors.newFixedThreadPool(3);
+JADX/net.ctpool/sources/com/facebook/imagepipeline/producers/H.java:40:        w5.k.f(iVar, "pooledByteBufferFactory");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/producers/M.java:26:        w5.k.f(iVar, "pooledByteBufferFactory");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/producers/N.java:42:        w5.k.f(iVar, "pooledByteBufferFactory");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/producers/i0.java:31:        w5.k.f(iVar, "pooledByteBufferFactory");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/producers/I.java:40:        w5.k.f(iVar, "pooledByteBufferFactory");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/producers/C0779p.java:604:        w5.k.f(aVar, "byteArrayPool");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/a.java:62:                P0.a.M("com.facebook.imagepipeline.memory.BasePool.Counter", "Unexpected decrement of %d. Current numBytes = %d, count = %d", Integer.valueOf(i7), Integer.valueOf(this.f10685b), Integer.valueOf(this.f10684a));
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/a.java:83:            super("Pool hard cap violation? Hard cap = " + i7 + " Used size = " + i8 + " Free size = " + i9 + " Request size = " + i10);
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/BufferMemoryChunkPool.java:9:public class BufferMemoryChunkPool extends e {
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/BufferMemoryChunkPool.java:11:    public BufferMemoryChunkPool(R0.d dVar, G g7, H h7) {
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/NativeMemoryChunkPool.java:8:public class NativeMemoryChunkPool extends e {
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/NativeMemoryChunkPool.java:10:    public NativeMemoryChunkPool(R0.d dVar, G g7, H h7) {
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/d.java:19:        k.f(g7, "poolParams");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/d.java:20:        k.f(h7, "poolStatsTracker");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/AshmemMemoryChunkPool.java:11:public class AshmemMemoryChunkPool extends e {
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/AshmemMemoryChunkPool.java:13:    public AshmemMemoryChunkPool(R0.d dVar, G g7, H h7) {
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/f.java:28:        w5.k.f(eVar, "pool");
+JADX/net.ctpool/sources/com/facebook/imagepipeline/memory/f.java:62:        w5.k.e(obj, "this.pool[newLength]");
+JADX/net.ctpool/sources/com/facebook/react/bridge/BackgroundExecutor.java:30:        this.mExecutorService = Executors.newFixedThreadPool(1, new NamedThreadFactory(str));
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromArray.java:3:import androidx.core.util.Pools$SimplePool;
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromArray.java:7:    private static final Pools$SimplePool sPool = new Pools$SimplePool(10);
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromArray.java:15:        DynamicFromArray dynamicFromArray = (DynamicFromArray) sPool.b();
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromArray.java:100:        sPool.a(this);
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromMap.java:3:import androidx.core.util.Pools$SimplePool;
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromMap.java:7:    private static final ThreadLocal<Pools$SimplePool> sPool = new ThreadLocal<Pools$SimplePool>() { // from class: com.facebook.react.bridge.DynamicFromMap.1
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromMap.java:11:        public Pools$SimplePool initialValue() {
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromMap.java:12:            return new Pools$SimplePool(10);
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromMap.java:22:        DynamicFromMap dynamicFromMap = (DynamicFromMap) sPool.get().b();
+JADX/net.ctpool/sources/com/facebook/react/bridge/DynamicFromMap.java:115:        sPool.get().a(this);
+JADX/net.ctpool/sources/com/facebook/react/modules/image/ImageLoaderModule.java:350:        new e(readableArray, promise, getReactApplicationContext()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/facebook/react/devsupport/b0.java:249:        new e((X1.e) O1.a.c(this.f11582m)).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, (X1.j) this.f11583n.getAdapter().getItem(i7));
+JADX/net.ctpool/sources/com/facebook/react/devsupport/C0803g.java:306:            new a(hVar, str).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/facebook/react/devsupport/C0803g.java:311:        new d().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/facebook/react/devsupport/C0803g.java:315:        new b().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/facebook/react/devsupport/C0803g.java:359:            new c().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/facebook/react/views/text/c.java:366:            } else if ("balanced".equals(str)) {
+JADX/net.ctpool/sources/com/facebook/react/views/text/q.java:256:        if (str.equals("balanced")) {
+JADX/net.ctpool/sources/com/facebook/react/views/textinput/K.java:123:            } else if ("balanced".equals(str)) {
+JADX/net.ctpool/sources/com/google/android/gms/common/internal/n.java:8:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/android/gms/common/internal/n.java:19:        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new NamedThreadFactory("CallbackExecutor"));
+JADX/net.ctpool/sources/com/google/android/gms/common/internal/n.java:20:        threadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/com/google/android/gms/common/internal/n.java:21:        f13699a = Executors.unconfigurableExecutorService(threadPoolExecutor);
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/a.java:3:import com.google.android.gms.common.providers.PooledExecutorsProvider;
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/a.java:9:final class a implements PooledExecutorsProvider.PooledExecutorFactory {
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/a.java:13:    @Override // com.google.android.gms.common.providers.PooledExecutorsProvider.PooledExecutorFactory
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/a.java:16:        return Executors.unconfigurableScheduledExecutorService(Executors.newScheduledThreadPool(1));
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/PooledExecutorsProvider.java:9:public class PooledExecutorsProvider {
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/PooledExecutorsProvider.java:10:    private static PooledExecutorFactory zza;
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/PooledExecutorsProvider.java:12:    public interface PooledExecutorFactory {
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/PooledExecutorsProvider.java:18:    private PooledExecutorsProvider() {
+JADX/net.ctpool/sources/com/google/android/gms/common/providers/PooledExecutorsProvider.java:23:    public static synchronized PooledExecutorFactory getInstance() {
+JADX/net.ctpool/sources/com/google/android/gms/internal/base/r.java:7:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/android/gms/internal/base/r.java:22:        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(i7, i7, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), threadFactory);
+JADX/net.ctpool/sources/com/google/android/gms/internal/base/r.java:23:        threadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/com/google/android/gms/internal/base/r.java:24:        return Executors.unconfigurableExecutorService(threadPoolExecutor);
+JADX/net.ctpool/sources/com/google/android/gms/internal/measurement/H0.java:7:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/android/gms/internal/measurement/H0.java:17:        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), threadFactory);
+JADX/net.ctpool/sources/com/google/android/gms/internal/measurement/H0.java:18:        threadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/com/google/android/gms/internal/measurement/H0.java:19:        return Executors.unconfigurableExecutorService(threadPoolExecutor);
+JADX/net.ctpool/sources/com/google/android/gms/internal/measurement/C1132k6.java:214:        f14673E = c1251y3E.c("measurement.sgtm.app_allowlist", "de.zalando.mobile.internal,de.zalando.mobile.internal.debug,de.zalando.lounge.dev,grit.storytel.app,com.rbc.mobile.android,com.rbc.mobile.android,com.dylvian.mango.activities,com.home24.android,com.home24.android.staging,se.lf.mobile.android,se.lf.mobile.android.beta,se.lf.mobile.android.rc,se.lf.mobile.android.test,se.lf.mobile.android.test.debug,com.boots.flagship.android,com.boots.flagshiproi.android,de.zalando.mobile,com.trivago,com.getyourguide.android,es.mobail.meliarewards,se.nansen.coop.debug,se.nansen.coop,se.coop.coop.qa,com.booking,com.google.firebaseengage,com.mse.mseapp.dev,com.mse.mseapp,pl.eobuwie.eobuwieapp,br.com.eventim.mobile.app.Android,ch.ticketcorner.mobile.app.Android,de.eventim.mobile.app.Android,dk.billetlugen.mobile.app.Android,nl.eventim.mobile.app.Android,com.asos.app,com.blueshieldca.prod,dk.magnetix.tivoliapp,matas.matas.internal,nl.omoda,com.thetrainline,com.simo.androidtest,de.aboutyou.mobile.app,com.hometogo,de.casamundo.casamundomobile,it.casevacanz,eu.coolblue.shop,com.stihl.app,com.indeed.android.jobsearch,com.homeretailgroup.argos.android,com.dylvian.mango.activities.pre,se.nansen.coop.qa");
+JADX/net.ctpool/sources/com/google/android/gms/measurement/internal/G.java:859:        f15459B0 = b("measurement.sgtm.app_allowlist", "de.zalando.mobile.internal,de.zalando.mobile.internal.debug,de.zalando.lounge.dev,grit.storytel.app,com.rbc.mobile.android,com.rbc.mobile.android,com.dylvian.mango.activities,com.home24.android,com.home24.android.staging,se.lf.mobile.android,se.lf.mobile.android.beta,se.lf.mobile.android.rc,se.lf.mobile.android.test,se.lf.mobile.android.test.debug,com.boots.flagship.android,com.boots.flagshiproi.android,de.zalando.mobile,com.trivago,com.getyourguide.android,es.mobail.meliarewards,se.nansen.coop.debug,se.nansen.coop,se.coop.coop.qa,com.booking,com.google.firebaseengage,com.mse.mseapp.dev,com.mse.mseapp,pl.eobuwie.eobuwieapp,br.com.eventim.mobile.app.Android,ch.ticketcorner.mobile.app.Android,de.eventim.mobile.app.Android,dk.billetlugen.mobile.app.Android,nl.eventim.mobile.app.Android,com.asos.app,com.blueshieldca.prod,dk.magnetix.tivoliapp,matas.matas.internal,nl.omoda,com.thetrainline,com.simo.androidtest,de.aboutyou.mobile.app,com.hometogo,de.casamundo.casamundomobile,it.casevacanz,eu.coolblue.shop,com.stihl.app,com.indeed.android.jobsearch,com.homeretailgroup.argos.android,com.dylvian.mango.activities.pre,se.nansen.coop.qa", new Z1() { // from class: com.google.android.gms.measurement.internal.R1
+JADX/net.ctpool/sources/com/google/firebase/concurrent/ExecutorsRegistrar.java:26:@SuppressLint({"ThreadPoolCreation"})
+JADX/net.ctpool/sources/com/google/firebase/concurrent/ExecutorsRegistrar.java:101:        return u(Executors.newFixedThreadPool(4, k("Firebase Background", 10, i())));
+JADX/net.ctpool/sources/com/google/firebase/concurrent/ExecutorsRegistrar.java:106:        return u(Executors.newFixedThreadPool(Math.max(2, Runtime.getRuntime().availableProcessors()), k("Firebase Lite", 0, t())));
+JADX/net.ctpool/sources/com/google/firebase/concurrent/ExecutorsRegistrar.java:111:        return u(Executors.newCachedThreadPool(j("Firebase Blocking", 11)));
+JADX/net.ctpool/sources/com/google/firebase/messaging/AbstractC1550o.java:9:import java.util.concurrent.ScheduledThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/firebase/messaging/AbstractC1550o.java:10:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/firebase/messaging/AbstractC1550o.java:17:        return new ThreadPoolExecutor(0, 1, 30L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new NamedThreadFactory(str));
+JADX/net.ctpool/sources/com/google/firebase/messaging/AbstractC1550o.java:25:        return new ScheduledThreadPoolExecutor(1, new NamedThreadFactory("Firebase-Messaging-Init"));
+JADX/net.ctpool/sources/com/google/firebase/messaging/AbstractC1550o.java:41:        return new ScheduledThreadPoolExecutor(1, new NamedThreadFactory("Firebase-Messaging-Topics-Io"));
+JADX/net.ctpool/sources/com/google/firebase/messaging/q0.java:15:import java.util.concurrent.ScheduledThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/firebase/messaging/q0.java:86:        this(context, str, new ScheduledThreadPoolExecutor(0, new NamedThreadFactory("Firebase-FirebaseInstanceIdServiceConnection")));
+JADX/net.ctpool/sources/com/google/firebase/messaging/FirebaseMessaging.java:23:import java.util.concurrent.ScheduledThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/firebase/messaging/FirebaseMessaging.java:493:                    f17506o = new ScheduledThreadPoolExecutor(1, new NamedThreadFactory("TAG"));
+JADX/net.ctpool/sources/com/google/firebase/messaging/e0.java:15:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/firebase/messaging/e0.java:31:    ExecutorService f17632p = new ThreadPoolExecutor(0, 1, 30, TimeUnit.SECONDS, new LinkedBlockingQueue(), new NamedThreadFactory("firebase-iid-executor"));
+JADX/net.ctpool/sources/com/google/firebase/analytics/a.java:5:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/com/google/firebase/analytics/a.java:9:final class a extends ThreadPoolExecutor {
+JADX/net.ctpool/sources/com/google/firebase/analytics/a.java:14:    @Override // java.util.concurrent.ThreadPoolExecutor, java.util.concurrent.Executor
+JADX/net.ctpool/sources/com/reactnativecommunity/asyncstorage/AsyncStorageModule.java:487:        this(reactApplicationContext, AsyncTask.THREAD_POOL_EXECUTOR);
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:25:    public static final String KEY_REWARD_USER_CUSTOM_DATA = "reward_user_custom_data";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:27:    public static final String KEY_SCENARIO_REWARD_NAME = "scenario_reward_name";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:28:    public static final String KEY_SCENARIO_REWARD_NUMBER = "scenario_reward_number";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:48:    private static final String METHOD_REWARD_USER_CUSTOM_DATA = "getRewardUserCustomData";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:50:    private static final String METHOD_SCENARIO_REWARD_NAME = "getScenarioRewardName";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:51:    private static final String METHOD_SCENARIO_REWARD_NUMBER = "getScenarioRewardNumber";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:81:            jSONObject.put("scenario_reward_name", getScenarioRewardName(obj));
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:82:            jSONObject.put("scenario_reward_number", getScenarioRewardNumber(obj));
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:86:            jSONObject.put("reward_user_custom_data", getRewardUserCustomData(obj));
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:153:    private static String getRewardUserCustomData(Object obj) {
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:154:        return BaseAdNetworkHelper.getString(obj, METHOD_REWARD_USER_CUSTOM_DATA, "reward_user_custom_data");
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:161:    private static String getScenarioRewardName(Object obj) {
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:162:        return BaseAdNetworkHelper.getString(obj, METHOD_SCENARIO_REWARD_NAME, "scenario_reward_name");
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:165:    private static int getScenarioRewardNumber(Object obj) {
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/HyperBidHelper.java:166:        return BaseAdNetworkHelper.getInt(obj, METHOD_SCENARIO_REWARD_NUMBER, "scenario_reward_number");
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:23:    public static final String KEY_REWARD_USER_CUSTOM_DATA = "reward_user_custom_data";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:25:    public static final String KEY_SCENARIO_REWARD_NAME = "scenario_reward_name";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:26:    public static final String KEY_SCENARIO_REWARD_NUMBER = "scenario_reward_number";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:46:    private static final String METHOD_REWARD_USER_CUSTOM_DATA = "getRewardUserCustomData";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:48:    private static final String METHOD_SCENARIO_REWARD_NAME = "getScenarioRewardName";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:49:    private static final String METHOD_SCENARIO_REWARD_NUMBER = "getScenarioRewardNumber";
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:81:            jSONObject.put("scenario_reward_name", getScenarioRewardName(obj));
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:82:            jSONObject.put("scenario_reward_number", getScenarioRewardNumber(obj));
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:86:            jSONObject.put("reward_user_custom_data", getRewardUserCustomData(obj));
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:145:    private static String getRewardUserCustomData(Object obj) {
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:146:        return BaseAdNetworkHelper.getString(obj, METHOD_REWARD_USER_CUSTOM_DATA, "reward_user_custom_data");
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:153:    private static String getScenarioRewardName(Object obj) {
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:154:        return BaseAdNetworkHelper.getString(obj, METHOD_SCENARIO_REWARD_NAME, "scenario_reward_name");
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:157:    private static int getScenarioRewardNumber(Object obj) {
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/TopOnHelper.java:158:        return BaseAdNetworkHelper.getInt(obj, METHOD_SCENARIO_REWARD_NUMBER, "scenario_reward_number");
+JADX/net.ctpool/sources/com/tenjin/android/utils/adnetwork/CASHelper.java:56:        return intFromEnum != 1 ? intFromEnum != 2 ? intFromEnum != 3 ? intFromEnum != 4 ? "none" : "rewarded" : "native" : "interstitial" : "banner";
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:539:            new AsyncEvent(queueEvent).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:720:            new AsyncGetDeeplink((Callback) basicCallback).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Callback[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:723:                new AsyncGetAttributionInfo((AttributionInfoCallback) basicCallback).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Callback[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:766:        new AsyncEvent(str, jSONObject).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:820:                new AsyncEvent(str).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:839:                new AsyncEvent(str, i7).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:937:            new AsyncEvent(str, str2, i7, d7).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:955:                new AsyncUpdateConversion(Integer.valueOf(i7)).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:1471:                new AsyncEvent(str, str2).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:1494:                new AsyncEvent(str, str2, i7, d7, strEncode, strEncode2).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:1526:            new AsyncEvent(transaction).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/tenjin/android/TenjinSDK.java:1566:            this.connectTask = new AsyncConnect().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new Void[0]);
+JADX/net.ctpool/sources/com/ctpool/updater/UpdaterModule.java:1:package com.ctpool.updater;
+JADX/net.ctpool/sources/com/ctpool/MainActivity.java:1:package com.ctpool;
+JADX/net.ctpool/sources/com/ctpool/MainActivity.java:17:        return "ctpool";
+JADX/net.ctpool/sources/com/ctpool/MainApplication.java:1:package com.ctpool;
+JADX/net.ctpool/sources/d0/AbstractC1602a.java:10:    public static int[] f18654a = {R.attr.color, R.attr.alpha, R.attr.lStar, net.ctpool.R.attr.alpha, net.ctpool.R.attr.lStar};
+JADX/net.ctpool/sources/d0/AbstractC1602a.java:13:    public static int[] f18655b = {net.ctpool.R.attr.fontProviderAuthority, net.ctpool.R.attr.fontProviderCerts, net.ctpool.R.attr.fontProviderFetchStrategy, net.ctpool.R.attr.fontProviderFetchTimeout, net.ctpool.R.attr.fontProviderPackage, net.ctpool.R.attr.fontProviderQuery, net.ctpool.R.attr.fontProviderSystemFontFamily};
+JADX/net.ctpool/sources/d0/AbstractC1602a.java:16:    public static int[] f18656c = {R.attr.font, R.attr.fontWeight, R.attr.fontStyle, R.attr.ttcIndex, R.attr.fontVariationSettings, net.ctpool.R.attr.font, net.ctpool.R.attr.fontStyle, net.ctpool.R.attr.fontVariationSettings, net.ctpool.R.attr.fontWeight, net.ctpool.R.attr.ttcIndex};
+JADX/net.ctpool/sources/d0/AbstractC1602a.java:25:    public static int[] f18659f = {net.ctpool.R.attr.swipeRefreshLayoutProgressSpinnerBackgroundColor};
+JADX/net.ctpool/sources/d6/e.java:202:                throw new NullPointerException("null cannot be cast to non-null type okhttp3.internal.platform.Jdk8WithJettyBootPlatform.AlpnProvider");
+JADX/net.ctpool/sources/d6/j.java:189:        return "OkHttp";
+JADX/net.ctpool/sources/d6/j.java:218:            str = str + " To see where this was allocated, set the OkHttpClient logger level to FINE: Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);";
+JADX/net.ctpool/sources/e/j.java:3:import net.ctpool.R;
+JADX/net.ctpool/sources/e6/e.java:29:            linkedHashMap.put(name, "OkHttp");
+JADX/net.ctpool/sources/e6/e.java:32:        w5.k.e(name2, "OkHttpClient::class.java.name");
+JADX/net.ctpool/sources/e6/e.java:33:        linkedHashMap.put(name2, "okhttp.OkHttpClient");
+JADX/net.ctpool/sources/e6/e.java:36:        linkedHashMap.put(name3, "okhttp.Http2");
+JADX/net.ctpool/sources/e6/e.java:39:        linkedHashMap.put(name4, "okhttp.TaskRunner");
+JADX/net.ctpool/sources/e6/e.java:40:        linkedHashMap.put("okhttp3.mockwebserver.MockWebServer", "okhttp.MockWebServer");
+JADX/net.ctpool/sources/h4/I.java:10:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/h4/I.java:101:        ExecutorService executorServiceE = e(d(str), new ThreadPoolExecutor.DiscardPolicy());
+JADX/net.ctpool/sources/h4/I.java:111:        return Executors.unconfigurableExecutorService(new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue(), threadFactory, rejectedExecutionHandler));
+JADX/net.ctpool/sources/h4/L.java:95:        C1629g.f().i("Determining Crashlytics installation ID...");
+JADX/net.ctpool/sources/h4/C1728q.java:26:import java.util.concurrent.ScheduledThreadPoolExecutor;
+JADX/net.ctpool/sources/h4/C1728q.java:352:        return AbstractC2275o.d(new ScheduledThreadPoolExecutor(1), new e(j7));
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:11:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:32:        public final void rejectedExecution(Runnable runnable, ThreadPoolExecutor threadPoolExecutor) {
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:33:            this.f19551a.h(runnable, threadPoolExecutor);
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:40:        this.f20103b = iVarH.e("android_task_executor_maximum_pool_size", 1);
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:48:        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(0, this.f20103b, this.f20104c, TimeUnit.SECONDS, new SynchronousQueue());
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:49:        threadPoolExecutor.setRejectedExecutionHandler(this.f20105d);
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:50:        return threadPoolExecutor;
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:54:    public /* synthetic */ void h(Runnable runnable, ThreadPoolExecutor threadPoolExecutor) {
+JADX/net.ctpool/sources/io/invertase/firebase/common/a.java:55:        if (threadPoolExecutor.isShutdown() || threadPoolExecutor.isTerminated() || threadPoolExecutor.isTerminating()) {
+JADX/net.ctpool/sources/j/C1769c.java:20:    private final ExecutorService f20194b = Executors.newFixedThreadPool(4, new a());
+JADX/net.ctpool/sources/kotlin/coroutines/jvm/internal/DebugProbesKt.java:10:/* JADX INFO: loaded from: net.ctpool.apk:DebugProbesKt.bin */
+JADX/net.ctpool/sources/m3/d.java:3:import net.ctpool.R;
+JADX/net.ctpool/sources/l6/d.java:12:    private static final ExecutorService f21153m = Executors.newCachedThreadPool();
+JADX/net.ctpool/sources/q/g.java:14:            throw new IllegalArgumentException("The max pool size must be > 0");
+JADX/net.ctpool/sources/t/c.java:3:import net.ctpool.R;
+JADX/net.ctpool/sources/net/ctpool/R.java:1:package net.ctpool;
+JADX/net.ctpool/sources/y3/C2240a.java:137:                        scheduledExecutorServiceUnconfigurableScheduledExecutorService = Executors.unconfigurableScheduledExecutorService(Executors.newScheduledThreadPool(1));
+JADX/net.ctpool/sources/i6/C1752d.java:361:            throw new IllegalStateException("Unbalanced enter/exit".toString());
+JADX/net.ctpool/sources/X5/e.java:10:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/X5/e.java:76:        private final ThreadPoolExecutor f4377a;
+JADX/net.ctpool/sources/X5/e.java:80:            this.f4377a = new ThreadPoolExecutor(0, Api.BaseClientBuilder.API_PRIORITY_OTHER, 60L, TimeUnit.SECONDS, new SynchronousQueue(), threadFactory);
+JADX/net.ctpool/sources/h6/d.java:749:                                throw new NullPointerException("null cannot be cast to non-null type okhttp3.internal.ws.RealWebSocket.Close");
+JADX/net.ctpool/sources/h6/d.java:803:                                throw new NullPointerException("null cannot be cast to non-null type okhttp3.internal.ws.RealWebSocket.Close");
+JADX/net.ctpool/sources/h6/d.java:848:                            throw new NullPointerException("null cannot be cast to non-null type okhttp3.internal.ws.RealWebSocket.Message");
+JADX/net.ctpool/sources/o4/e.java:16:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/o4/e.java:43:    private final ThreadPoolExecutor f21478g;
+JADX/net.ctpool/sources/o4/e.java:91:        this.f21478g = new ThreadPoolExecutor(1, 1, 0L, TimeUnit.MILLISECONDS, arrayBlockingQueue);
+JADX/net.ctpool/sources/n3/AbstractC1909b.java:19:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/n3/AbstractC1909b.java:66:                    executorServiceUnconfigurableExecutorService = Executors.unconfigurableExecutorService(Executors.newCachedThreadPool(new NamedThreadFactory("firebase-iid-executor")));
+JADX/net.ctpool/sources/n3/AbstractC1909b.java:99:                            ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new NamedThreadFactory("pscm-ack-executor"));
+JADX/net.ctpool/sources/n3/AbstractC1909b.java:100:                            threadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/n3/AbstractC1909b.java:101:                            executorUnconfigurableExecutorService = Executors.unconfigurableExecutorService(threadPoolExecutor);
+JADX/net.ctpool/sources/n3/C1910c.java:19:import java.util.concurrent.ScheduledThreadPoolExecutor;
+JADX/net.ctpool/sources/n3/C1910c.java:76:        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
+JADX/net.ctpool/sources/n3/C1910c.java:77:        scheduledThreadPoolExecutor.setKeepAliveTime(60L, TimeUnit.SECONDS);
+JADX/net.ctpool/sources/n3/C1910c.java:78:        scheduledThreadPoolExecutor.allowCoreThreadTimeOut(true);
+JADX/net.ctpool/sources/n3/C1910c.java:79:        this.f21378d = scheduledThreadPoolExecutor;
+JADX/net.ctpool/sources/n3/C1903D.java:39:                f21356e = new C1903D(context, Executors.unconfigurableScheduledExecutorService(Executors.newScheduledThreadPool(1, new NamedThreadFactory("MessengerIpcClient"))));
+JADX/net.ctpool/sources/u0/w0.java:27:    public static final ExecutorService f22480a = Executors.newCachedThreadPool();
+JADX/net.ctpool/sources/u0/AbstractC2113p0.java:28:    public static ExecutorService f22466a = Executors.newCachedThreadPool();
+JADX/net.ctpool/sources/u0/R0.java:57:    public static final ExecutorService f22440a = Executors.newCachedThreadPool();
+JADX/net.ctpool/sources/u/AbstractC2079d.java:3:import net.ctpool.R;
+JADX/net.ctpool/sources/w1/j.java:53:        w5.k.f(iVar, "pooledByteBufferFactory");
+JADX/net.ctpool/sources/w1/j.java:54:        w5.k.f(lVar, "pooledByteStreams");
+JADX/net.ctpool/sources/w3/s.java:9:    public static final String[] f22699a = {"ad_activeview", "ad_click", "ad_exposure", "ad_query", "ad_reward", "adunit_exposure", "app_clear_data", "app_exception", "app_remove", "app_store_refund", "app_store_subscription_cancel", "app_store_subscription_convert", "app_store_subscription_renew", "app_upgrade", "app_update", "ga_campaign", LogEvent.LEVEL_ERROR, "first_open", "first_visit", "in_app_purchase", "notification_dismiss", "notification_foreground", "notification_open", "notification_receive", "os_update", "session_start", "session_start_with_rollout", "user_engagement", "ad_impression", "screen_view", "ga_extra_parameter", "app_background", "firebase_campaign"};
+JADX/net.ctpool/sources/y1/b.java:40:        ExecutorService executorServiceNewFixedThreadPool = Executors.newFixedThreadPool(2, new r(10, "FrescoIoBoundExecutor", true));
+JADX/net.ctpool/sources/y1/b.java:41:        w5.k.e(executorServiceNewFixedThreadPool, "newFixedThreadPool(\n    …oIoBoundExecutor\", true))");
+JADX/net.ctpool/sources/y1/b.java:42:        this.f22904a = executorServiceNewFixedThreadPool;
+JADX/net.ctpool/sources/y1/b.java:43:        ExecutorService executorServiceNewFixedThreadPool2 = Executors.newFixedThreadPool(i7, new r(10, "FrescoDecodeExecutor", true));
+JADX/net.ctpool/sources/y1/b.java:44:        w5.k.e(executorServiceNewFixedThreadPool2, "newFixedThreadPool(\n    …coDecodeExecutor\", true))");
+JADX/net.ctpool/sources/y1/b.java:45:        this.f22905b = executorServiceNewFixedThreadPool2;
+JADX/net.ctpool/sources/y1/b.java:46:        ExecutorService executorServiceNewFixedThreadPool3 = Executors.newFixedThreadPool(i7, new r(10, "FrescoBackgroundExecutor", true));
+JADX/net.ctpool/sources/y1/b.java:47:        w5.k.e(executorServiceNewFixedThreadPool3, "newFixedThreadPool(\n    …ckgroundExecutor\", true))");
+JADX/net.ctpool/sources/y1/b.java:48:        this.f22906c = executorServiceNewFixedThreadPool3;
+JADX/net.ctpool/sources/y1/b.java:49:        ExecutorService executorServiceNewFixedThreadPool4 = Executors.newFixedThreadPool(1, new r(10, "FrescoLightWeightBackgroundExecutor", true));
+JADX/net.ctpool/sources/y1/b.java:50:        w5.k.e(executorServiceNewFixedThreadPool4, "newFixedThreadPool(\n    …ckgroundExecutor\", true))");
+JADX/net.ctpool/sources/y1/b.java:51:        this.f22907d = executorServiceNewFixedThreadPool4;
+JADX/net.ctpool/sources/y1/b.java:52:        ScheduledExecutorService scheduledExecutorServiceNewScheduledThreadPool = Executors.newScheduledThreadPool(i7, new r(10, "FrescoBackgroundExecutor", true));
+JADX/net.ctpool/sources/y1/b.java:53:        w5.k.e(scheduledExecutorServiceNewScheduledThreadPool, "newScheduledThreadPool(\n…ckgroundExecutor\", true))");
+JADX/net.ctpool/sources/y1/b.java:54:        this.f22908e = scheduledExecutorServiceNewScheduledThreadPool;
+JADX/net.ctpool/sources/y1/n.java:262:            w5.k.f(aVar, "byteArrayPool");
+JADX/net.ctpool/sources/y1/n.java:267:            w5.k.f(iVar, "pooledByteBufferFactory");
+JADX/net.ctpool/sources/y1/n.java:268:            w5.k.f(lVar, "pooledByteStreams");
+JADX/net.ctpool/sources/x0/C2208a.java:8:import java.util.concurrent.ThreadPoolExecutor;
+JADX/net.ctpool/sources/x0/C2208a.java:51:    public static void a(ThreadPoolExecutor threadPoolExecutor, boolean z6) {
+JADX/net.ctpool/sources/x0/C2208a.java:52:        threadPoolExecutor.allowCoreThreadTimeOut(z6);
+JADX/net.ctpool/sources/x0/C2208a.java:56:        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(f22755d, f22756e, 1L, TimeUnit.SECONDS, new LinkedBlockingQueue());
+JADX/net.ctpool/sources/x0/C2208a.java:57:        a(threadPoolExecutor, true);
+JADX/net.ctpool/sources/x0/C2208a.java:58:        return threadPoolExecutor;
+JADX/net.ctpool/sources/x0/C2209b.java:77:        this.f22759a = !c() ? Executors.newCachedThreadPool() : C2208a.b();
+JADX/net.ctpool/sources/v1/C2155a.java:19:        k.f(iVar, "bitmapPool");
+JADX/net.ctpool/sources/v1/C2155a.java:34:        k.e(aVarC, "closeableReferenceFactor…reate(bitmap, bitmapPool)");
+JADX/net.ctpool/sources/v1/c.java:19:        k.f(f7, "poolFactory");
+JADX/net.ctpool/sources/v1/c.java:23:        k.e(iVarB, "poolFactory.bitmapPool");
+JADX/net.ctpool/sources/Z5/a.java:85:            aVarI.e("User-Agent", "okhttp/4.9.2");
+JADX/net.ctpool/sources/U5/c.java:131:        k.e(name, "OkHttpClient::class.java.name");
+JADX/net.ctpool/sources/U5/c.java:132:        f3991i = g.i0(g.h0(name, "okhttp3."), "Client");
+JADX/net.ctpool/sources/u1/b.java:260:        k.f(zVar, "okHttpClient");
+JADX/net.ctpool/sources/u1/b.java:262:        k.e(executorServiceC, "okHttpClient.dispatcher().executorService()");
+JADX/net.ctpool/sources/u1/C2125a.java:20:        k.f(zVar, "okHttpClient");
+JADX/net.ctpool/sources/okhttp3/internal/publicsuffix/PublicSuffixDatabase.java:1:package okhttp3.internal.publicsuffix;

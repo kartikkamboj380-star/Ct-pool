@@ -1,0 +1,37 @@
+.class final Lcom/RNAppleAuthentication/a$c$b;
+.super Lcom/RNAppleAuthentication/a$c;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/RNAppleAuthentication/a$c;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = "b"
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/RNAppleAuthentication/a$c;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public h()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    const-string v0, "email"
+
+    return-object v0
+.end method

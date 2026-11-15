@@ -1,0 +1,103 @@
+package com.facebook.react.modules.deviceinfo;
+
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import com.facebook.fbreact.specs.NativeDeviceInfoSpec;
+import com.facebook.react.bridge.LifecycleEventListener;
+import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReactNoCrashSoftException;
+import com.facebook.react.bridge.ReactSoftExceptionLogger;
+import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.uimanager.C0877h;
+import i2.InterfaceC1741a;
+import i5.q;
+import j5.AbstractC1787F;
+import java.util.Map;
+import w5.k;
+
+/* JADX INFO: loaded from: classes.dex */
+@InterfaceC1741a(name = NativeDeviceInfoSpec.NAME)
+public final class DeviceInfoModule extends NativeDeviceInfoSpec implements LifecycleEventListener {
+    private float fontScale;
+    private ReadableMap previousDisplayMetrics;
+    private ReactApplicationContext reactApplicationContext;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public DeviceInfoModule(Context context) {
+        super(null);
+        k.f(context, "context");
+        this.reactApplicationContext = null;
+        C0877h.f(context);
+        this.fontScale = context.getResources().getConfiguration().fontScale;
+    }
+
+    public final void emitUpdateDimensionsEvent() {
+        ReactApplicationContext reactApplicationContext = this.reactApplicationContext;
+        if (reactApplicationContext != null) {
+            if (!reactApplicationContext.hasActiveReactInstance()) {
+                ReactSoftExceptionLogger.logSoftException(NativeDeviceInfoSpec.NAME, new ReactNoCrashSoftException("No active CatalystInstance, cannot emitUpdateDimensionsEvent"));
+                return;
+            }
+            WritableMap writableMapA = C0877h.a(this.fontScale);
+            ReadableMap readableMap = this.previousDisplayMetrics;
+            if (readableMap == null) {
+                this.previousDisplayMetrics = writableMapA.copy();
+            } else {
+                if (k.b(writableMapA, readableMap)) {
+                    return;
+                }
+                this.previousDisplayMetrics = writableMapA.copy();
+                reactApplicationContext.emitDeviceEvent("didUpdateDimensions", writableMapA);
+            }
+        }
+    }
+
+    @Override // com.facebook.fbreact.specs.NativeDeviceInfoSpec
+    public Map<String, Object> getTypedExportedConstants() {
+        WritableMap writableMapA = C0877h.a(this.fontScale);
+        this.previousDisplayMetrics = writableMapA.copy();
+        return AbstractC1787F.e(q.a("Dimensions", writableMapA.toHashMap()));
+    }
+
+    @Override // com.facebook.react.bridge.BaseJavaModule, com.facebook.react.bridge.NativeModule
+    public void invalidate() {
+        super.invalidate();
+        ReactApplicationContext reactApplicationContext = this.reactApplicationContext;
+        if (reactApplicationContext != null) {
+            reactApplicationContext.removeLifecycleEventListener(this);
+        }
+    }
+
+    @Override // com.facebook.react.bridge.LifecycleEventListener
+    public void onHostDestroy() {
+    }
+
+    @Override // com.facebook.react.bridge.LifecycleEventListener
+    public void onHostPause() {
+    }
+
+    @Override // com.facebook.react.bridge.LifecycleEventListener
+    public void onHostResume() {
+        Resources resources;
+        Configuration configuration;
+        ReactApplicationContext reactApplicationContext = this.reactApplicationContext;
+        Float fValueOf = (reactApplicationContext == null || (resources = reactApplicationContext.getResources()) == null || (configuration = resources.getConfiguration()) == null) ? null : Float.valueOf(configuration.fontScale);
+        if (fValueOf == null || k.a(fValueOf, this.fontScale)) {
+            return;
+        }
+        this.fontScale = fValueOf.floatValue();
+        emitUpdateDimensionsEvent();
+    }
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public DeviceInfoModule(ReactApplicationContext reactApplicationContext) {
+        super(reactApplicationContext);
+        k.f(reactApplicationContext, "reactContext");
+        C0877h.f(reactApplicationContext);
+        this.fontScale = reactApplicationContext.getResources().getConfiguration().fontScale;
+        reactApplicationContext.addLifecycleEventListener(this);
+        this.reactApplicationContext = reactApplicationContext;
+    }
+}

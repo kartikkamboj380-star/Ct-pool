@@ -1,0 +1,170 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: yu27mdHBY+o4KgQDKEwhtgYenxM=
+
+Name: lib/arm64-v8a/libc++_shared.so
+SHA1-Digest: dijX8PS9oo8UqLCpZq2SELawOYI=
+
+Name: lib/arm64-v8a/libcrashlytics-common.so
+SHA1-Digest: ESVMpJcwi4WSEosGfX/YQx8hyxk=
+
+Name: lib/arm64-v8a/libcrashlytics-handler.so
+SHA1-Digest: flk2cLX04uPi5ro9sM3w92FdtyU=
+
+Name: lib/arm64-v8a/libcrashlytics-trampoline.so
+SHA1-Digest: O9IO3kZACn46zhtFA7rTOvsu/Qo=
+
+Name: lib/arm64-v8a/libcrashlytics.so
+SHA1-Digest: XqU4Dxglg/iTpO0PXkS/HmVbr9o=
+
+Name: lib/arm64-v8a/libfabricjni.so
+SHA1-Digest: Xm4rXteQMJKrAakoJOsazQTX+yw=
+
+Name: lib/arm64-v8a/libfbjni.so
+SHA1-Digest: iiwvN+qKzm71f3gXOfvfO9JkKsI=
+
+Name: lib/arm64-v8a/libfolly_runtime.so
+SHA1-Digest: u/wDNKTQQqDK9a0OXEgjwCG3dYc=
+
+Name: lib/arm64-v8a/libglog.so
+SHA1-Digest: ONM5gP9RYY6gCc/kl4O+DyB2SNc=
+
+Name: lib/arm64-v8a/libhermes.so
+SHA1-Digest: GqngEH4mX3kEgVgIP9ykE8I8HBc=
+
+Name: lib/arm64-v8a/libhermes_executor.so
+SHA1-Digest: 02jc4aTUj8PPYop/RoGe1JllZyQ=
+
+Name: lib/arm64-v8a/libhermesinstancejni.so
+SHA1-Digest: PdvDc6jCO8qezpwqeWqqnBny1Ts=
+
+Name: lib/arm64-v8a/libimagepipeline.so
+SHA1-Digest: HdhghXryta6aUhQEt8FDb7ufOT8=
+
+Name: lib/arm64-v8a/libjscinstance.so
+SHA1-Digest: KpoAjs+tA+ooJib2A/dt1s7+Qgo=
+
+Name: lib/arm64-v8a/libjsi.so
+SHA1-Digest: lPEq2Ojy/osHDFguy9AicnjasXE=
+
+Name: lib/arm64-v8a/libjsijniprofiler.so
+SHA1-Digest: hQ0w+O8JrVo7uRy0W6Zp0bhnyJs=
+
+Name: lib/arm64-v8a/libjsinspector.so
+SHA1-Digest: sokOmjFUhwiv09bg0NHafa91Y80=
+
+Name: lib/arm64-v8a/libmapbufferjni.so
+SHA1-Digest: Kl3xYoVenC4ty7z+lchV5OQBA8E=
+
+Name: lib/arm64-v8a/libnative-filters.so
+SHA1-Digest: 5aLlgNBoSYsb77ENfld/UFO/1ok=
+
+Name: lib/arm64-v8a/libnative-imagetranscoder.so
+SHA1-Digest: Vf2MPVisbXWjc12nvL4JvUryHc4=
+
+Name: lib/arm64-v8a/libreact_codegen_rncore.so
+SHA1-Digest: /Riu0/vEboX92lmaihGcfw7dx6U=
+
+Name: lib/arm64-v8a/libreact_debug.so
+SHA1-Digest: TUs09iSmvVliX5zqmKY1cq1DRWQ=
+
+Name: lib/arm64-v8a/libreact_devsupportjni.so
+SHA1-Digest: NosvX8zIryf9EmvVrWy6DZrr+m0=
+
+Name: lib/arm64-v8a/libreact_featureflags.so
+SHA1-Digest: LEDiuzAMeELU23UGMZ+0NH34PCQ=
+
+Name: lib/arm64-v8a/libreact_featureflagsjni.so
+SHA1-Digest: zmDBhzfcrf5UGCwfUr21VqxLhUU=
+
+Name: lib/arm64-v8a/libreact_nativemodule_core.so
+SHA1-Digest: hTb118wiMmSiOaXoMoGtkOF1PHM=
+
+Name: lib/arm64-v8a/libreact_nativemodule_defaults.so
+SHA1-Digest: HMdmKWkVxNHrEeCVdzKJJ9VINOM=
+
+Name: lib/arm64-v8a/libreact_nativemodule_dom.so
+SHA1-Digest: YjD8QSywC3oGcHHFCSuKLbIWCLo=
+
+Name: lib/arm64-v8a/libreact_nativemodule_featureflags.so
+SHA1-Digest: 7jfw2YaEHJ4Nx/nK9+6jRhWF7lo=
+
+Name: lib/arm64-v8a/libreact_nativemodule_microtasks.so
+SHA1-Digest: F8YKy7QPeXpmkicLki91PZU7nGw=
+
+Name: lib/arm64-v8a/libreact_newarchdefaults.so
+SHA1-Digest: uHyjKeZtMHYniKLanzuxNNnHyGc=
+
+Name: lib/arm64-v8a/libreact_performance_timeline.so
+SHA1-Digest: pvtXMQL9hEU2r734kMQXrz3NoOo=
+
+Name: lib/arm64-v8a/libreact_render_componentregistry.so
+SHA1-Digest: Tut+t3GNIzUOXeGamufATm3zSJo=
+
+Name: lib/arm64-v8a/libreact_render_consistency.so
+SHA1-Digest: hF0M+9a6F8p5hklpjU6da3idI0w=
+
+Name: lib/arm64-v8a/libreact_render_core.so
+SHA1-Digest: VCTZLcoKF8ia4KZulrBftbzbbwI=
+
+Name: lib/arm64-v8a/libreact_render_debug.so
+SHA1-Digest: UbB55xokK5oaDuNUIG4yVv1Y+Rg=
+
+Name: lib/arm64-v8a/libreact_render_graphics.so
+SHA1-Digest: aJsJvbDQv2hpSy+4Y6EMRvPmosQ=
+
+Name: lib/arm64-v8a/libreact_render_imagemanager.so
+SHA1-Digest: LdUDvVtOt/kn7oHHRDGr3hTK1ao=
+
+Name: lib/arm64-v8a/libreact_render_mapbuffer.so
+SHA1-Digest: wgI8u+MseUV1WhZ3iM94rK1OBUI=
+
+Name: lib/arm64-v8a/libreact_render_observers_events.so
+SHA1-Digest: Glo0iXZO7NBZsrMqQnzWmAOCwkY=
+
+Name: lib/arm64-v8a/libreact_render_uimanager_consistency.so
+SHA1-Digest: N5UyRhhcvQNB38mJySRbOn/+M+s=
+
+Name: lib/arm64-v8a/libreact_utils.so
+SHA1-Digest: 7Ja2ElLuA9crqLJeYSLDaWFYewc=
+
+Name: lib/arm64-v8a/libreactnativeblob.so
+SHA1-Digest: di7Xq6cjTqh0FNA5+zTQZz1Qm9Q=
+
+Name: lib/arm64-v8a/libreactnativejni.so
+SHA1-Digest: dYCF9ogtY/ciwbsqe0R3teNF65M=
+
+Name: lib/arm64-v8a/librninstance.so
+SHA1-Digest: bc42xfmjzSeLI8He0jEuCZCGb9E=
+
+Name: lib/arm64-v8a/librnscreens.so
+SHA1-Digest: mFkzvMI5riTOPziWeLu0VZh4Z4A=
+
+Name: lib/arm64-v8a/librrc_image.so
+SHA1-Digest: QsvOqqK9EN5WZZ7idiG6QS8SLbs=
+
+Name: lib/arm64-v8a/librrc_legacyviewmanagerinterop.so
+SHA1-Digest: UQglZH3PIM9E1YosHlBBo7w0S8s=
+
+Name: lib/arm64-v8a/librrc_textinput.so
+SHA1-Digest: UDXZFhtK8gZ+ilMMLHUyTmkS3Po=
+
+Name: lib/arm64-v8a/librrc_view.so
+SHA1-Digest: KvThdedXEAaKP9jZYHhMXywivmM=
+
+Name: lib/arm64-v8a/libruntimeexecutor.so
+SHA1-Digest: cBEFJi2nGlsU46vljBSt0hZPHIc=
+
+Name: lib/arm64-v8a/libturbomodulejsijni.so
+SHA1-Digest: 7OPksHlm7xXV+VJNLFQoop8r/Ok=
+
+Name: lib/arm64-v8a/libuimanagerjni.so
+SHA1-Digest: +qp6259GnrJ86NLDlYMOTKQo1AU=
+
+Name: lib/arm64-v8a/libyoga.so
+SHA1-Digest: siF+MHxi2Zzr70xkOgAXdm4WxQY=
+
+Name: stamp-cert-sha256
+SHA1-Digest: 5vTkm69vqAbusD/fho7oWwc7j+I=
+
