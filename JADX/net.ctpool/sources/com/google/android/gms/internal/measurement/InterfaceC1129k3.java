@@ -1,0 +1,7 @@
+package com.google.android.gms.internal.measurement;
+
+/* JADX INFO: renamed from: com.google.android.gms.internal.measurement.k3, reason: case insensitive filesystem */
+/* JADX INFO: loaded from: classes.dex */
+public interface InterfaceC1129k3 {
+    Object a();
+}

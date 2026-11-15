@@ -1,0 +1,14 @@
+package g0;
+
+import android.animation.PropertyValuesHolder;
+import android.animation.TypeConverter;
+import android.graphics.Path;
+import android.util.Property;
+
+/* JADX INFO: renamed from: g0.h, reason: case insensitive filesystem */
+/* JADX INFO: loaded from: classes.dex */
+abstract class AbstractC1677h {
+    static PropertyValuesHolder a(Property property, Path path) {
+        return PropertyValuesHolder.ofObject(property, (TypeConverter) null, path);
+    }
+}

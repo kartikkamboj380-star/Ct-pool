@@ -1,0 +1,4 @@
+APKTOOL/manifest-test/assets/index.android.bundle
+APKTOOL/manifest-test/assets/supplierconfig.json
+APKTOOL/manifest-test/assets/dexopt/baseline.prof
+APKTOOL/manifest-test/assets/dexopt/baseline.profm

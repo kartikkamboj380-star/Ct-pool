@@ -1,0 +1,6 @@
+No command apktool found, did you mean:
+ Command avbtool in package android-tools
+ Command atool in package atool
+ Command audtool in package audacious from the x11-repo repository
+ Command ipptool in package cups
+ Command psktool in package gnutls

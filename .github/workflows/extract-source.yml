@@ -1,0 +1,101 @@
+name: Extract CTPool decompiled source
+
+# Manual-only trigger: automatic events (push, pull_request) are intentionally
+# not configured so that commits made by this workflow can never re-trigger it
+# (infinite workflow loop prevention, together with the [skip ci] commit
+# message and the fact that pushes made with the default GITHUB_TOKEN do not
+# trigger new workflow runs).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    name: Join, validate and extract ZIP parts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Join the four ZIP parts
+        id: join
+        run: |
+          set -euo pipefail
+          archive="CTPool_1.0.54_DECOMPILED.zip"
+          missing=0
+          for part in "${archive}".part001 "${archive}".part002 "${archive}".part003 "${archive}".part004; do
+            if [ ! -f "$part" ]; then
+              echo "::error::Missing archive part: $part"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "::error::Cannot reconstruct ZIP: all four parts (part001-part004) must exist in the repository root."
+            exit 1
+          fi
+          cat "${archive}".part001 "${archive}".part002 "${archive}".part003 "${archive}".part004 > "$archive"
+          echo "archive=$archive" >> "$GITHUB_OUTPUT"
+          echo "Joined archive:"
+          ls -l "$archive"
+
+      - name: Validate the reconstructed ZIP
+        env:
+          ARCHIVE: ${{ steps.join.outputs.archive }}
+        run: |
+          set -euo pipefail
+          if ! unzip -t "$ARCHIVE" > zip-test.log 2>&1; then
+            echo "::error::ZIP validation failed - the reconstructed archive is corrupt. Aborting."
+            tail -n 50 zip-test.log
+            exit 1
+          fi
+          echo "ZIP validation passed:"
+          tail -n 3 zip-test.log
+          rm -f zip-test.log
+
+      - name: Check for unsafe archive paths
+        env:
+          ARCHIVE: ${{ steps.join.outputs.archive }}
+        run: |
+          set -euo pipefail
+          # Reject absolute paths or path traversal (zip-slip) entries.
+          if unzip -Z1 "$ARCHIVE" | grep -E '(^/|\.\.)' > unsafe.log; then
+            echo "::error::Archive contains unsafe paths - aborting extraction."
+            cat unsafe.log
+            exit 1
+          fi
+          rm -f unsafe.log
+          echo "No unsafe paths found."
+
+      - name: Extract archive into the repository root
+        env:
+          ARCHIVE: ${{ steps.join.outputs.archive }}
+        run: |
+          set -euo pipefail
+          unzip -q -o "$ARCHIVE" -d .
+          echo "Extraction complete. Top-level entries:"
+          ls -1
+
+      - name: Commit extracted files to main
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # The joined ZIP is a transient build artifact - never commit it
+          # (the four .part files remain the source of truth in the repo).
+          rm -f "CTPool_1.0.54_DECOMPILED.zip"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Extraction verified: repository root already matches the archive. Nothing to commit."
+          else
+            # [skip ci] plus the manual-only trigger prevent workflow loops.
+            git commit -m "Extract CTPool decompiled source [skip ci]"
+            git push origin main
+            echo "Extracted files committed to main."
+          fi
+          echo "Top-level repository contents after extraction:"
+          git ls-tree --name-only HEAD
