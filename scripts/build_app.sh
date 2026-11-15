@@ -106,6 +106,30 @@ for t in "${SPLITS[@]}" universal; do
   fi
 done
 
+# aapt2 platform-grade parse gate: libaapt2 (same parser lineage Android uses
+# at install/runtime) must parse binary manifest + resources.arsc of every
+# signed output. Catches the exact failure class PackageInstaller reports as
+# "There was a problem while parsing the package".
+AAPT2_DIR="$WORK/aapt2"
+mkdir -p "$AAPT2_DIR"
+if [ ! -x "$AAPT2_DIR/aapt2" ]; then
+  python3 - "$APKTOOL_JAR" "$AAPT2_DIR" <<'PY'
+import sys, zipfile, os, stat
+jar, out = sys.argv[1], sys.argv[2]
+with zipfile.ZipFile(jar) as z:
+    data = z.read("prebuilt/linux/aapt2")
+p = os.path.join(out, "aapt2")
+with open(p, "wb") as f:
+    f.write(data)
+os.chmod(p, os.stat(p).st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
+PY
+fi
+for t in "${SPLITS[@]}" universal; do
+  "$AAPT2_DIR/aapt2" dump badging "$WORK/signed/$t.apk" | grep -q "package: name='net.ctpool'" \
+    || { echo "ERROR: aapt2 parse gate failed ($t)"; exit 1; }
+  echo "    PASS aapt2 badging parse ($t)"
+done
+
 echo "==> [7/7] package dist artifacts"
 cp "$WORK/signed/universal.apk" "$DIST/CTPool_1.0.25_universal_arm64.apk"
 python3 - "$WORK" "$DIST" "$REPO" <<'EOF'

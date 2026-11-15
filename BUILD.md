@@ -47,8 +47,30 @@ adb install dist/CTPool_1.0.25_universal_arm64.apk
    - `scripts/verify_apk.py` — CRCs, unsafe paths, required alignment, every
      v1 manifest digest, the PKCS7 signature over `CERT.SF` (crypto-level),
      and an **entry-set check**: every pre-sign entry must survive signing;
-   - `apksigtool verify` — crypto verification of the v2/v3 signing block.
+   - `apksigtool verify` — crypto verification of the v2/v3 signing block;
+   - **aapt2 parse gate** — apktool's bundled `aapt2 dump badging` must parse
+     every signed APK (binary manifest + `resources.arsc` through the same
+     libaapt2 lineage Android uses at install time — the exact failure class
+     PackageInstaller reports as *"There was a problem while parsing the
+     package"*).
 6. Packages `dist/` artifacts + checksums.
+
+## Known benign manifest differences (universal APK vs Play original)
+
+A full 177-node AXML diff between `EXTRACTED/net.ctpool.apk` and the rebuilt
+universal APK shows exactly two deltas, both intentional/benign:
+
+| Delta | Why it is safe |
+|---|---|
+| `manifest@requiredSplitTypes` removed | Required for standalone install of the universal APK (a single APK cannot satisfy split requirements). |
+| `meta-data …default_notification_icon` `@resource` `0x7f080089` → `0x0` | apktool decodes this to `@null`; the entry does not exist in the base split's `resources.arsc`. A `TYPE_REFERENCE` with data `0` makes `PackageManager.putInt(name, 0)` — **no parse error**; Firebase just falls back to its default notification icon at runtime. |
+
+Everything else — permissions, providers, file-provider paths, split config,
+all other `meta-data` references — is byte-identical. The APK additionally
+passes independent manual verification: v2 content digest recomputed per the
+APK Signature Scheme v2 spec (SHA-256, 1 MiB chunked sections A/B/C), RSA
+PKCS#1 v1.5 signatures over `signedData` (v2+v3) verified with
+`cryptography`, and SPKI/public-key structure checked.
 
 ## Prerequisites
 
